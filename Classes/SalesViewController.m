@@ -78,6 +78,11 @@
 {
 	[super loadView];
 	
+	if( [self respondsToSelector:@selector(edgesForExtendedLayout)] )
+	{
+		[self performSelector:@selector(setEdgesForExtendedLayout:) withObject:[NSNumber numberWithInteger:0]];
+	}
+	
 	self.viewMode = [[NSUserDefaults standardUserDefaults] integerForKey:kSettingDashboardViewMode];
 	
 	BOOL iPad = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
