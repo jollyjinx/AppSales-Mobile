@@ -107,7 +107,7 @@
 	} else {
 		graphView.sectionLabelButton.enabled = NO;
 	}
-	[graphView setNumberOfBarsPerPage:iPad ? 14 : 7];
+	[graphView setNumberOfBarsPerPage:iPad ? 14 : 21];
 	[self.topView addSubview:graphView];
 	
 	NSArray *segments;
